@@ -1,0 +1,21 @@
+@(vacs: Seq[Vacation], nowTime: Long)
+
+<table>
+    <tr>
+        <th>startDate</th>
+        <th>endDate</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @for(vac <- vacs) {
+        <tr>
+            <td>@java.time.Instant.ofEpochMilli(vac.startDate.value)</td>
+            <td>@java.time.Instant.ofEpochMilli(vac.endDate.value)</td>
+            @if(vac.startDate.value > nowTime) {
+
+                <td><button value="@vac._id.get.stringify" onclick="editVac(this)">Edit</button></td>
+                <td><button value="@vac._id.get.stringify" onclick="delVac(this)">Delete</button></td>
+            }
+        </tr>
+    }
+</table>

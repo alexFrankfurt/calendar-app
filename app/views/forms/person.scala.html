@@ -1,0 +1,11 @@
+@(personForm: Form[models.Person])(implicit messagesProvider: MessagesProvider)
+
+@import helper._
+
+@helper.form(action = routes.StaffController.addPerson(None)) {
+    @helper.inputText(personForm("name"))
+    @helper.inputText(personForm("position"))
+
+
+    <input type="submit" value="Submit">
+}

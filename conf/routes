@@ -1,0 +1,53 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET       /panel/persons              controllers.AppController.personsPanel
+# Retrieve all persons from database
+GET       /persons                    controllers.StaffController.listPersons(order: String, position: Option[String])
+
+GET       /panel/person/add           controllers.StaffController.addPersonPanel
+# Add person to database
++ nocsrf
+POST      /persons                    controllers.StaffController.addPerson(notme: Option[String])
+
+GET       /panel/vacations            controllers.AppController.vacationsPanel
+# Retrieve all vacations from database
+GET       /vacations                  controllers.VacationController.listVacations(order: String, from: Long, to: Long)
+
+GET       /panel/vacation/add        controllers.VacationController.addVacationPanel
+# Add vacation entry to database
++ nocsrf
+POST      /vacations                  controllers.VacationController.addVacation
+
+# Delete vacation by id
++nocsrf
+DELETE    /vacations/:id              controllers.VacationController.deleteVacation(id: reactivemongo.bson.BSONObjectID)
+# Modify vacation by id
++nocsrf
+PATCH     /vacation/:id               controllers.VacationController.updateVacation(id: reactivemongo.bson.BSONObjectID, from: Long, to: Long)
+
+# Check user's account
++ nocsrf
+POST      /tokensignin                controllers.AppController.tokenSignIn
+GET       /signup                     controllers.StaffController.signup
++ nocsrf
+POST      /signout                    controllers.AppController.signOut
+
+GET       /manage                     controllers.AppController.manage
+
+GET       /form                       controllers.VacationController.form
+
+GET       /info                       controllers.AppController.info
+
+# index page
+GET       /                           controllers.AppController.index
+
+
+# Swagger docs
+GET       /swagger.json               controllers.ApiHelpController.getResources
+GET       /api-docs                   controllers.ApiDocsController.redirectToDocs
+
+# Map static resources from the /public folder to the /assets URL path
+GET       /assets/*file               controllers.Assets.at(file)
+GET       /versionedAssets/*file      controllers.Assets.versioned(file)

@@ -1,0 +1,40 @@
+@(content: Html = Html(""))(implicit assets: AssetsFinder)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="google-signin-client_id" content="1070842851815-mgehfhttih6op35dvnv7tfqvnsq7np1g.apps.googleusercontent.com">
+        <title>Vacation Calendar</title>
+        <link rel="stylesheet" href="@assets.path("stylesheets/main.css")">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/manage">Manage</a></li>
+                    <li><a href="#" onclick="signOut();">Sign Out</a></li>
+                </ul>
+            </header>
+            <aside class="sidebar">
+                <ul>
+                    <li id="persons-tab">Persons</li>
+                    <li id="add-person-tab">Add Person</li>
+                    <li id="vacations-tab">Vacations</li>
+                    <li id="add-vacation-tab">Add Vacation</li>
+                    <li id="my-vacations-tab">My Vacations</li>
+                </ul>
+            </aside>
+            <article class="content">
+                <div id="control-panel"></div>
+                <div id="data-panel"></div>
+                @content
+            </article>
+            <footer class="footer"></footer>
+        </div>
+
+        <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+        <script type="application/javascript" src="@assets.path("javascripts/main.js")"></script>
+    </body>
+</html>

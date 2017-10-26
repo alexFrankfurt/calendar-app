@@ -1,0 +1,15 @@
+@(persons: Seq[Person])
+
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Position</th>
+    </tr>
+    @for(person <- persons) {
+        <tr>
+            <td>@person.name</td>
+            <td>@person.position</td>
+        </tr>
+    }
+</table>

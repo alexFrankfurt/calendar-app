@@ -1,0 +1,6 @@
+*.scala   text
+*.js      text
+*.css     text
+*.sbt     text
+
+*.png     binary

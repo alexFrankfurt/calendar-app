@@ -1,0 +1,10 @@
+@(vacationForm: Form[models.Vacation])(implicit messagesProvider: MessagesProvider)
+
+@helper.form(action = routes.VacationController.addVacation) {
+    @helper.inputText(vacationForm("uid"))
+    @helper.inputDate(vacationForm("startDate"))
+    @helper.inputDate(vacationForm("endDate"))
+
+    <div id="inf"></div>
+    <input type="submit" value="Submit">
+}

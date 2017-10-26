@@ -1,0 +1,15 @@
+@()
+
+<form action="/persons" method="GET">
+    <input type="radio" name="order" id="asc-order" value="asc" checked>
+    <label for="asc-order">Asc</label>
+    <input type="radio" name="order" id="dsc-order" value="dsc">
+    <label for="dsc-order">Dsc</label>
+    <input type="text" name="position" id="person-position">
+    <label for="person-position">Search by position</label>
+
+    <button type="submit">Submit</button>
+</form>
+<div id="persons-data">
+
+</div>
