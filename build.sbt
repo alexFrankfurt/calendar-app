@@ -20,3 +20,4 @@ libraryDependencies ++= Seq(
 import play.sbt.routes.RoutesKeys
 
 RoutesKeys.routesImport += "play.modules.reactivemongo.PathBindables._"
+CoffeeScriptKeys.bare := true
