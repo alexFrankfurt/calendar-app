@@ -1,10 +1,10 @@
 @(persons: Seq[Person])
 
 
-<table>
+<table class="table">
     <tr>
-        <th>Name</th>
-        <th>Position</th>
+        <th scope="col">Name</th>
+        <th scope="col">Position</th>
     </tr>
     @for(person <- persons) {
         <tr>

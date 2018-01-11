@@ -3,9 +3,13 @@
 @import helper._
 
 @helper.form(action = routes.StaffController.addPerson(None)) {
-    @helper.inputText(personForm("name"))
-    @helper.inputText(personForm("position"))
+    <div class="form-group">
+        @helper.inputText(personForm("name"), 'class -> "form-control", 'placeholder -> "Enter name")
+    </div>
+    <div class="form-group">
+        @helper.inputText(personForm("position"), 'class -> "form-control", 'placeholder -> "Enter position")
+    </div>
 
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit"  class="btn btn-primary">
 }

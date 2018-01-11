@@ -1,14 +1,20 @@
 @()
 
-<form action="/persons" method="GET">
-    <input type="radio" name="order" id="asc-order" value="asc" checked>
-    <label for="asc-order">Asc</label>
-    <input type="radio" name="order" id="dsc-order" value="dsc">
-    <label for="dsc-order">Dsc</label>
-    <input type="text" name="position" id="person-position">
-    <label for="person-position">Search by position</label>
+<form action="/persons" method="GET" class="form-inline">
+    <div class="form-group">
+        <input type="radio" name="order" id="asc-order" value="asc" checked>
+        <label for="asc-order">Asc</label>
+        <input type="radio" name="order" id="dsc-order" value="dsc">
+        <label for="dsc-order">Dsc</label>
+    </div>
+    <div class="form-group">
 
-    <button type="submit">Submit</button>
+        <input type="text" name="position" id="person-position" class="form-control" placeholder="Enter full position name">
+        <label for="person-position">Search by position</label>
+
+    </div>
+
+    <button type="submit"  class="btn btn-primary">Submit</button>
 </form>
 <div id="persons-data">
 

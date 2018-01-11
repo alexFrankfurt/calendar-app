@@ -7,23 +7,24 @@
         <meta name="google-signin-client_id" content="1070842851815-mgehfhttih6op35dvnv7tfqvnsq7np1g.apps.googleusercontent.com">
         <title>Vacation Calendar</title>
         <link rel="stylesheet" href="@assets.path("stylesheets/main.css")">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     </head>
     <body>
         <div class="wrapper">
             <header class="header">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/manage">Manage</a></li>
-                    <li><a href="#" onclick="signOut();">Sign Out</a></li>
+                <ul class="nav">
+                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/manage" class="nav-link">Manage</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="signOut();">Sign Out</a></li>
                 </ul>
             </header>
             <aside class="sidebar">
-                <ul>
-                    <li id="persons-tab">Persons</li>
-                    <li id="add-person-tab">Add Person</li>
-                    <li id="vacations-tab">Vacations</li>
-                    <li id="add-vacation-tab">Add Vacation</li>
-                    <li id="my-vacations-tab">My Vacations</li>
+                <ul class="nav flex-column">
+                    <li id="persons-tab" class="nav-item">Persons</li>
+                    <li id="add-person-tab" class="nav-item">Add Person</li>
+                    <li id="vacations-tab" class="nav-item">Vacations</li>
+                    <li id="add-vacation-tab" class="nav-item">Add Vacation</li>
+                    <li id="my-vacations-tab" class="nav-item">My Vacations</li>
                 </ul>
             </aside>
             <article class="content">

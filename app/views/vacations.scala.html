@@ -1,11 +1,11 @@
 @(vacs: Seq[Vacation], nowTime: Long)
 
-<table>
+<table class="table">
     <tr>
-        <th>startDate</th>
-        <th>endDate</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th scope="col">startDate</th>
+        <th scope="col">endDate</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
     </tr>
     @for(vac <- vacs) {
         <tr>

@@ -148,7 +148,7 @@ addVacationPanel = ->
             credentials: 'include',
             body: fd
           .then (resp) ->
-            if (resp.ok)
+            if (resp.ok) 
               contentDiv.innerText = "Successful addition"
             else contentDiv.innerText = "Failure adding"
             resp.text()
