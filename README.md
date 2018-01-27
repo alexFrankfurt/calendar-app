@@ -15,4 +15,9 @@ ApiDoc is accessible from:
 
 ```localhost:9000/api-docs```
 
+### Features
 
+1. Gmail authorization.
+1. Search employees by position.
+1. Search vacations for specific date range.
+1. Delete/Edit future vacations.
